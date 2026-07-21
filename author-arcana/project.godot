@@ -14,10 +14,6 @@ config/name="AuthorArcana"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-ECS="*uid://dfqwl5njvdnmq"
-
 [display]
 
 window/stretch/mode="canvas_items"
@@ -26,10 +22,6 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="AuthorArcana"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/gecs/plugin.cfg")
 
 [physics]
 
