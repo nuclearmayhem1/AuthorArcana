@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d3o1vpmoayio7"]
+
+[ext_resource type="PackedScene" uid="uid://6r130dpc4tqs" path="res://UI/spell_designer.tscn" id="1_jjgbg"]
+
+[node name="Main" type="Node3D" unique_id=264128920]
+
+[node name="Spell Designer" parent="." unique_id=699773884 instance=ExtResource("1_jjgbg")]

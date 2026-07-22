@@ -1,0 +1,1292 @@
+[gd_scene format=3 uid="uid://6r130dpc4tqs"]
+
+[ext_resource type="Texture2D" uid="uid://b5n5v3w2ly35t" path="res://Assets/Texture2D/FireballPlaceholder.jpg" id="1_vyx71"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tw18t"]
+bg_color = Color(0.38, 0.38, 0.38, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qa5v"]
+font_size = 17
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4etm"]
+bg_color = Color(0.32, 0.32, 0.32, 1)
+
+[node name="Spell Designer" type="Control" unique_id=699773884]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Panel" parent="." unique_id=40378296]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.15
+grow_horizontal = 2
+
+[node name="Spellbars" type="ScrollContainer" parent="." unique_id=1917437488]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Spellbars" unique_id=971205471]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Spell" type="Panel" parent="Spellbars/HBoxContainer" unique_id=317536966]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="ComponentBar" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell" unique_id=523489722]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar" unique_id=1896019350]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer" unique_id=1400163581]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Component" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=967927716]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component" unique_id=1874734370]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component" unique_id=1554789219]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/PanelContainer" unique_id=134817860]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component" unique_id=449205792]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars" unique_id=779827223]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar" unique_id=2026916719]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar" unique_id=1949251401]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar/PanelContainer" unique_id=1575155253]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar" unique_id=618596335]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar/PanelContainer2" unique_id=1202894315]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars" unique_id=438228832]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar2" unique_id=1956727105]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar2" unique_id=1501554471]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar2/PanelContainer" unique_id=658872880]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar2" unique_id=871475732]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar2/PanelContainer2" unique_id=1215371847]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars" unique_id=1250163928]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar3" unique_id=1799850994]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar3" unique_id=234924942]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar3/PanelContainer" unique_id=1636157144]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar3" unique_id=359117488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component/StatBars/Statbar3/PanelContainer2" unique_id=326002790]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component2" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=1142695387]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2" unique_id=273448148]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2" unique_id=951464785]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/PanelContainer" unique_id=1309084469]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2" unique_id=120919230]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars" unique_id=1888502674]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar" unique_id=268949198]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar" unique_id=1780559182]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar/PanelContainer" unique_id=56644585]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar" unique_id=874622310]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar/PanelContainer2" unique_id=1036008549]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars" unique_id=1139314598]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar2" unique_id=1365410154]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar2" unique_id=1730438044]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar2/PanelContainer" unique_id=1410030934]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar2" unique_id=1423862017]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar2/PanelContainer2" unique_id=133383913]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars" unique_id=398337998]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar3" unique_id=1351118754]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar3" unique_id=1536697889]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar3/PanelContainer" unique_id=1443425739]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar3" unique_id=1712398107]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component2/StatBars/Statbar3/PanelContainer2" unique_id=1428592845]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component3" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=243314816]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3" unique_id=2025789485]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3" unique_id=800044872]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/PanelContainer" unique_id=154433289]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3" unique_id=1752768558]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars" unique_id=706022737]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar" unique_id=1613374674]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar" unique_id=1072137953]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar/PanelContainer" unique_id=553974433]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar" unique_id=618429147]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar/PanelContainer2" unique_id=1291839024]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars" unique_id=2088313031]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar2" unique_id=1422133374]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar2" unique_id=275517936]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar2/PanelContainer" unique_id=1884217236]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar2" unique_id=1599707016]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar2/PanelContainer2" unique_id=546509525]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars" unique_id=1043105423]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar3" unique_id=483182145]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar3" unique_id=1472739785]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar3/PanelContainer" unique_id=62170707]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar3" unique_id=1099328548]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component3/StatBars/Statbar3/PanelContainer2" unique_id=478064651]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component4" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=414714527]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4" unique_id=2130497657]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4" unique_id=1094645481]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/PanelContainer" unique_id=947079743]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4" unique_id=61673996]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars" unique_id=37997678]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar" unique_id=933871350]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar" unique_id=1460224698]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar/PanelContainer" unique_id=1512444760]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar" unique_id=582580735]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar/PanelContainer2" unique_id=444617244]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars" unique_id=821159458]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar2" unique_id=551998834]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar2" unique_id=1221634798]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar2/PanelContainer" unique_id=472344480]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar2" unique_id=198774688]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar2/PanelContainer2" unique_id=35829394]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars" unique_id=1369424691]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar3" unique_id=391450414]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar3" unique_id=1359342149]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar3/PanelContainer" unique_id=1205385013]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar3" unique_id=1426666061]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component4/StatBars/Statbar3/PanelContainer2" unique_id=479312973]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component5" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=1876016065]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5" unique_id=69431610]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5" unique_id=1129871734]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/PanelContainer" unique_id=422653123]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5" unique_id=1455630012]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars" unique_id=923251863]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar" unique_id=865426550]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar" unique_id=1100327888]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar/PanelContainer" unique_id=829111974]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar" unique_id=1297738682]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar/PanelContainer2" unique_id=98364993]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars" unique_id=645433846]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar2" unique_id=1180234928]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar2" unique_id=1257132076]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar2/PanelContainer" unique_id=1909298781]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar2" unique_id=915882916]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar2/PanelContainer2" unique_id=162811234]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars" unique_id=252206666]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar3" unique_id=60161363]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar3" unique_id=279386543]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar3/PanelContainer" unique_id=611217784]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar3" unique_id=1932458977]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component5/StatBars/Statbar3/PanelContainer2" unique_id=503844197]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component6" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=1360608126]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6" unique_id=1821136410]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6" unique_id=421851375]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/PanelContainer" unique_id=924932820]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6" unique_id=1265478330]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars" unique_id=788392957]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar" unique_id=104449637]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar" unique_id=197342255]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar/PanelContainer" unique_id=1163714]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar" unique_id=2121845980]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar/PanelContainer2" unique_id=735571826]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars" unique_id=1159800952]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar2" unique_id=1319443183]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar2" unique_id=413386111]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar2/PanelContainer" unique_id=2063803875]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar2" unique_id=1382008792]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar2/PanelContainer2" unique_id=1314470647]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars" unique_id=683425757]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar3" unique_id=321295317]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar3" unique_id=329045446]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar3/PanelContainer" unique_id=466061320]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar3" unique_id=1223365055]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component6/StatBars/Statbar3/PanelContainer2" unique_id=2138975052]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="Component7" type="Panel" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer" unique_id=735350681]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ComponentIcon" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7" unique_id=1068984313]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7" unique_id=914486040]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75000006
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tw18t")
+
+[node name="Name" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/PanelContainer" unique_id=1136381333]
+layout_mode = 2
+text = "Placeholder component name"
+label_settings = SubResource("LabelSettings_1qa5v")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatBars" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7" unique_id=1794039701]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.75000006
+theme_override_constants/separation = 0
+
+[node name="Statbar" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars" unique_id=340506937]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar" unique_id=1730557177]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar" unique_id=1554068011]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar/PanelContainer" unique_id=242776317]
+layout_mode = 2
+text = "EQ"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar" unique_id=239668153]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar/PanelContainer2" unique_id=1005962581]
+layout_mode = 2
+text = "-5"
+horizontal_alignment = 2
+
+[node name="Statbar2" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars" unique_id=1306425980]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar2" unique_id=1640365146]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar2" unique_id=425933868]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar2/PanelContainer" unique_id=1756917516]
+layout_mode = 2
+text = "MAG"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar2" unique_id=1792476776]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar2/PanelContainer2" unique_id=703882330]
+layout_mode = 2
+text = "+5"
+horizontal_alignment = 2
+
+[node name="Statbar3" type="Control" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars" unique_id=256218958]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar3" unique_id=1058833710]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.143
+anchor_bottom = 1.0
+offset_right = -0.025001526
+grow_vertical = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar3" unique_id=2044067576]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_right = 0.4457143
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatAbbreviation" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar3/PanelContainer" unique_id=1896687729]
+layout_mode = 2
+text = "MAN"
+
+[node name="PanelContainer2" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar3" unique_id=1238916928]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j4etm")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatValue" type="Label" parent="Spellbars/HBoxContainer/Spell/ComponentBar/ScrollContainer/VBoxContainer/Component7/StatBars/Statbar3/PanelContainer2" unique_id=1987298811]
+layout_mode = 2
+text = "-10"
+horizontal_alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell" unique_id=377026371]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Spellname" type="Label" parent="Spellbars/HBoxContainer/Spell/PanelContainer" unique_id=622063473]
+layout_mode = 2
+text = "Spell Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Spellbars/HBoxContainer/Spell" unique_id=881839419]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.025054466
+anchor_right = 0.3
+anchor_bottom = 0.09994771
+offset_bottom = 0.24799728
+text = "Edit"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Spellbars/HBoxContainer/Spell" unique_id=1039805010]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.025
+anchor_right = 1.0
+anchor_bottom = 0.1
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer" unique_id=493181999]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer" unique_id=677460671]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_vyx71")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Method" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer" unique_id=859130168]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer/Method" unique_id=731979372]
+layout_mode = 2
+size_flags_vertical = 1
+text = "MTH"
+vertical_alignment = 1
+
+[node name="Value" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer" unique_id=1152081102]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer/Value" unique_id=208419264]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Incantation"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer" unique_id=515441632]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer2" unique_id=1885465842]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_vyx71")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="Form" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer2" unique_id=268061333]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer2/Form" unique_id=1553581303]
+layout_mode = 2
+size_flags_vertical = 1
+text = "FRM"
+vertical_alignment = 1
+
+[node name="Value" type="PanelContainer" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer2" unique_id=232079060]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Spellbars/HBoxContainer/Spell/VBoxContainer/HBoxContainer2/Value" unique_id=378375554]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Orb"
+horizontal_alignment = 2
+vertical_alignment = 1
