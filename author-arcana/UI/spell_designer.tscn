@@ -11,6 +11,16 @@ font_size = 17
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4etm"]
 bg_color = Color(0.32, 0.32, 0.32, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_qrt67"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_h56mj"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_fh3tj"]
+line_spacing = 0.0
+font_size = 65
+
 [node name="Spell Designer" type="Control" unique_id=699773884]
 layout_mode = 3
 anchors_preset = 15
@@ -1206,7 +1216,7 @@ text = "Spell Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Spellbars/HBoxContainer/Spell" unique_id=881839419]
+[node name="EditSpell" type="Button" parent="Spellbars/HBoxContainer/Spell" unique_id=881839419]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.025054466
@@ -1290,3 +1300,162 @@ size_flags_vertical = 1
 text = "Orb"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="EditPanelContainer" type="Control" parent="." unique_id=304552763]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DefaultPanel" type="Panel" parent="EditPanelContainer" unique_id=1973739645]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="EditPanelContainer/DefaultPanel" unique_id=859237226]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Nothing being edited, open a spell or component to start editing"
+label_settings = SubResource("LabelSettings_qrt67")
+
+[node name="EditSpellPanel" type="Panel" parent="EditPanelContainer" unique_id=1715836477]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="EditPanelContainer/EditSpellPanel" unique_id=1668887231]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="EditPanelContainer/EditSpellPanel/PanelContainer" unique_id=745576141]
+layout_mode = 2
+text = "Editing Spell"
+label_settings = SubResource("LabelSettings_h56mj")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EditPanelContainer/EditSpellPanel" unique_id=876515561]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.046000004
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="HBoxContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer" unique_id=1849854602]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Name" unique_id=1783103728]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextEdit" type="TextEdit" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Name/PanelContainer" unique_id=1187584460]
+layout_mode = 2
+theme_override_font_sizes/font_size = 65
+placeholder_text = "Spell Name"
+
+[node name="Method" type="HBoxContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer" unique_id=1466190705]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Method" unique_id=1165829205]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Method" unique_id=185904184]
+layout_mode = 2
+
+[node name="Method" type="Label" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Method/PanelContainer" unique_id=557310561]
+layout_mode = 2
+text = "Method"
+label_settings = SubResource("LabelSettings_fh3tj")
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Method" unique_id=1776403289]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 65
+alignment = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+
+[node name="Form" type="HBoxContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer" unique_id=1252392007]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Form" unique_id=84908145]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("1_vyx71")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Form" unique_id=383020995]
+layout_mode = 2
+
+[node name="Form" type="Label" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Form/PanelContainer" unique_id=1630532841]
+layout_mode = 2
+text = "Form"
+label_settings = SubResource("LabelSettings_fh3tj")
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="EditPanelContainer/EditSpellPanel/VBoxContainer/Form" unique_id=23993998]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 65
+alignment = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
