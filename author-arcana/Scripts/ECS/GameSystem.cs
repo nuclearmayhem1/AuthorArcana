@@ -1,18 +1,14 @@
 using Friflo.Engine.ECS;
 using Friflo.Engine.ECS.Systems;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AUTHORARCANA.Scripts.ECS
+namespace AUTHORARCANA.ECS
 {
-    public abstract class GameSystem : QuerySystem
-    {
-
-    }
-
     public abstract class GameSystem<T1> : QuerySystem<T1> where T1 : struct, Friflo.Engine.ECS.IComponent
     {
         private HashSet<Entity> matchedEntities = new HashSet<Entity>();
@@ -31,7 +27,7 @@ namespace AUTHORARCANA.Scripts.ECS
             if (matchedEntities.Add(entity))
             {
                 entity.OnComponentChanged += HandleComponentChanged;
-                OnMatch(ref component, entity);
+                OnMatch(ref component, entity); 
             }
         }
 
@@ -49,7 +45,7 @@ namespace AUTHORARCANA.Scripts.ECS
             }
         }
 
-        protected abstract void Update(ref T1 component, Entity entity);
+        protected virtual void Update(ref T1 component, Entity entity) { }
 
         protected virtual void OnMatch(ref T1 component, Entity entity) { }
         protected virtual void OnUnmatch(ComponentType componentType, Entity entity) { }
@@ -94,7 +90,7 @@ namespace AUTHORARCANA.Scripts.ECS
             }
         }
 
-        protected abstract void Update(ref T1 component1, ref T2 component2, Entity entity);
+        protected virtual void Update(ref T1 component1, ref T2 component2, Entity entity) { }
 
         protected virtual void OnMatch(ref T1 component1, ref T2 component2, Entity entity) { }
         protected virtual void OnUnmatch(ComponentType componentType, Entity entity) { }
@@ -140,7 +136,7 @@ namespace AUTHORARCANA.Scripts.ECS
             }
         }
 
-        protected abstract void Update(ref T1 component1, ref T2 component2, ref T3 component3, Entity entity);
+        protected virtual void Update(ref T1 component1, ref T2 component2, ref T3 component3, Entity entity) { }
 
         protected virtual void OnMatch(ref T1 component1, ref T2 component2, ref T3 component3, Entity entity) { }
         protected virtual void OnUnmatch(ComponentType componentType, Entity entity) { }
@@ -187,7 +183,7 @@ namespace AUTHORARCANA.Scripts.ECS
             }
         }
 
-        protected abstract void Update(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, Entity entity);
+        protected virtual void Update(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, Entity entity) { }
 
         protected virtual void OnMatch(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, Entity entity) { }
         protected virtual void OnUnmatch(ComponentType componentType, Entity entity) { }
@@ -235,7 +231,7 @@ namespace AUTHORARCANA.Scripts.ECS
             }
         }
 
-        protected abstract void Update(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, ref T5 component5, Entity entity);
+        protected virtual void Update(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, ref T5 component5, Entity entity) { }
 
         protected virtual void OnMatch(ref T1 component1, ref T2 component2, ref T3 component3, ref T4 component4, ref T5 component5, Entity entity) { }
         protected virtual void OnUnmatch(ComponentType componentType, Entity entity) { }

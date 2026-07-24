@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\author-arcana"
+    "\\author-arcana",
+    "\\author-arcana\\Scripts",
+    "\\author-arcana\\Scripts\\Bridges",
+    "\\author-arcana\\Scripts\\Content",
+    "\\author-arcana\\Scripts\\Content\\Core",
+    "\\author-arcana\\Scripts\\ECS"
   ],
-  "SelectedNode": "\\author-arcana\\AuthorArcana.sln",
+  "SelectedNode": "\\author-arcana\\Scripts\\ECS\\GameSystem.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c1dgtav1fpjss"]
+
+[ext_resource type="Script" uid="uid://cbuxr5v3yleo1" path="res://Scripts/DevTools/EcsTester.cs" id="1_sj0jx"]
+
+[node name="EcsTest" type="Node" unique_id=1219117700]
+script = ExtResource("1_sj0jx")
