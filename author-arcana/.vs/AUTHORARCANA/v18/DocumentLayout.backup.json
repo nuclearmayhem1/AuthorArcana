@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\veikri\\Documents\\GitHub\\AuthorArcana\\author-arcana\\",
+  "WorkspaceRootPath": "C:\\Users\\krist\\source\\repos\\AuthorArcana\\author-arcana\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B748B53B-5DF0-4A16-ACB5-B803823CD151}|AUTHORARCANA.csproj|c:\\users\\veikri\\documents\\github\\authorarcana\\author-arcana\\scripts\\ecsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B748B53B-5DF0-4A16-ACB5-B803823CD151}|AUTHORARCANA.csproj|solutionrelative:scripts\\ecsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|c:\\users\\krist\\source\\repos\\authorarcana\\author-arcana\\scripts\\ecs\\gamesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|solutionrelative:scripts\\ecs\\gamesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B748B53B-5DF0-4A16-ACB5-B803823CD151}|AUTHORARCANA.csproj|c:\\users\\veikri\\documents\\github\\authorarcana\\author-arcana\\scripts\\ecs\\ecsattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B748B53B-5DF0-4A16-ACB5-B803823CD151}|AUTHORARCANA.csproj|solutionrelative:scripts\\ecs\\ecsattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|c:\\users\\krist\\source\\repos\\authorarcana\\author-arcana\\scripts\\ecs\\ecsattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|solutionrelative:scripts\\ecs\\ecsattributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|c:\\users\\krist\\source\\repos\\authorarcana\\author-arcana\\scripts\\ecsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C47765F-FAB1-4201-BC05-155906AE831E}|AUTHORARCANA.csproj|solutionrelative:scripts\\ecsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +30,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameSystem.cs",
+              "DocumentMoniker": "C:\\USERS\\KRIST\\SOURCE\\REPOS\\AUTHORARCANA\\AUTHOR-ARCANA\\Scripts\\ECS\\GameSystem.cs",
+              "RelativeDocumentMoniker": "Scripts\\ECS\\GameSystem.cs",
+              "ToolTip": "C:\\USERS\\KRIST\\SOURCE\\REPOS\\AUTHORARCANA\\AUTHOR-ARCANA\\Scripts\\ECS\\GameSystem.cs",
+              "RelativeToolTip": "Scripts\\ECS\\GameSystem.cs",
+              "ViewState": "AgIAADwAAAAAL9GuQhoZwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-23T20:59:33.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ECSAttributes.cs",
-              "DocumentMoniker": "C:\\Users\\veikri\\Documents\\GitHub\\AuthorArcana\\author-arcana\\Scripts\\ECS\\ECSAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\krist\\source\\repos\\AuthorArcana\\author-arcana\\Scripts\\ECS\\ECSAttributes.cs",
               "RelativeDocumentMoniker": "Scripts\\ECS\\ECSAttributes.cs",
-              "ToolTip": "C:\\Users\\veikri\\Documents\\GitHub\\AuthorArcana\\author-arcana\\Scripts\\ECS\\ECSAttributes.cs",
+              "ToolTip": "C:\\Users\\krist\\source\\repos\\AuthorArcana\\author-arcana\\Scripts\\ECS\\ECSAttributes.cs",
               "RelativeToolTip": "Scripts\\ECS\\ECSAttributes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T15:46:17.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EcsManager.cs",
-              "DocumentMoniker": "C:\\Users\\veikri\\Documents\\GitHub\\AuthorArcana\\author-arcana\\Scripts\\EcsManager.cs",
+              "DocumentMoniker": "C:\\Users\\krist\\source\\repos\\AuthorArcana\\author-arcana\\Scripts\\EcsManager.cs",
               "RelativeDocumentMoniker": "Scripts\\EcsManager.cs",
-              "ToolTip": "C:\\Users\\veikri\\Documents\\GitHub\\AuthorArcana\\author-arcana\\Scripts\\EcsManager.cs",
+              "ToolTip": "C:\\Users\\krist\\source\\repos\\AuthorArcana\\author-arcana\\Scripts\\EcsManager.cs",
               "RelativeToolTip": "Scripts\\EcsManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAOngmNGkZwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T14:04:48.582Z",
               "EditorCaption": ""

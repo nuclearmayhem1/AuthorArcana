@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUTHORARCANA", "AUTHORARCANA.csproj", "{B748B53B-5DF0-4A16-ACB5-B803823CD151}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AUTHORARCANA", "AUTHORARCANA.csproj", "{4C47765F-FAB1-4201-BC05-155906AE831E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{B748B53B-5DF0-4A16-ACB5-B803823CD151}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{4C47765F-FAB1-4201-BC05-155906AE831E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

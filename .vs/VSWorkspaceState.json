@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\author-arcana",
-    "\\author-arcana\\Scenes",
-    "\\author-arcana\\Scripts"
+    "\\author-arcana"
   ],
-  "SelectedNode": "\\author-arcana\\Scripts\\EcsManager.cs",
+  "SelectedNode": "\\author-arcana\\AuthorArcana.sln",
   "PreviewInSolutionExplorer": false
 }
