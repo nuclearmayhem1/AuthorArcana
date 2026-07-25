@@ -21,4 +21,19 @@ namespace AUTHORARCANA.DEFINITIONS
             return GD.Load<PackedScene>("res://Assets/Model/" + name + ".tscn");
         }
     }
+
+    public struct AnimatedModelAsset
+    {
+        public string name;
+
+        public AnimatedModelAsset(string name)
+        {
+            this.name = name;
+        }
+
+        public PackedScene GetModel()
+        {
+            return GD.Load<PackedScene>("res://Assets/AnimatedModel/" + name + ".tscn");
+        }
+    }
 }

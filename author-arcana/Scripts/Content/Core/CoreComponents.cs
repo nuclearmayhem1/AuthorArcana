@@ -3,7 +3,10 @@ using Friflo.Engine.ECS.Systems;
 using Godot;
 using System;
 using System.ComponentModel;
+using System.Linq;
 using IComponent = Friflo.Engine.ECS.IComponent;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace AUTHORARCANA.CONTENT;
 
@@ -124,4 +127,148 @@ public class ModelSystem : GameSystem<Model,WorldObject>
     {
         GodotBridge.Instance.DestroyModel(entity);
     }
+}
+
+public struct AnimatedModel : IComponent
+{
+    public AnimatedModelAsset asset;
+    /// <summary>
+    /// The Godot Node3D representation of this entity's model.
+    /// </summary>
+    /// <remarks>
+    /// Do not access directly. Use AnimationModelSystems methods instead to maintain ECS synchronization.
+    /// </remarks>
+    public Node3D node3D;
+
+    /// <summary>
+    /// Godot's AnimationPlayer
+    /// </summary>
+    /// <remarks>
+    /// Do not access directly. Use AnimationModelSystems methods instead to maintain ECS synchronization.
+    /// </remarks>
+    public AnimationPlayer animationPlayer;
+
+    public List<StringName> availableAnimations;
+
+    public bool playOnMatch;
+
+    public AnimatedModel(AnimatedModelAsset asset, bool playOnMatch = false)
+    {
+        this.asset = asset;
+        this.playOnMatch = playOnMatch;
+    }
+    public AnimatedModel(string name, bool playOnMatch = false)
+    {
+        this.asset = new AnimatedModelAsset(name);
+        this.playOnMatch = playOnMatch;
+    }
+}
+
+[Update]
+public class AnimatedModelSystem : GameSystem<AnimatedModel, WorldObject>
+{
+    protected override void OnMatch(ref AnimatedModel model, ref WorldObject worldObject, Entity entity)
+    {
+        Node3D node = GodotBridge.Instance.GetOrCreateModel(entity, model.asset);
+        model.node3D = node;
+
+        bool foundAnimationPlayer = false;
+
+        foreach (Node child in node.GetChildren())
+        {
+            if (child is AnimationPlayer animationPlayer)
+            {
+                if (foundAnimationPlayer == true)
+                {
+                    throw new Exception("AnimationModel can only have one AnimationPlayer");
+                }
+
+                model.animationPlayer = animationPlayer;
+
+                AnimationLibrary library = animationPlayer.GetAnimationLibrary("");
+
+                model.availableAnimations = library.GetAnimationList().ToList();
+
+                foundAnimationPlayer = true;
+            }
+        }
+
+        if (foundAnimationPlayer == false)
+        {
+            throw new Exception("AnimationModel must have one AnimationPlayer");
+        }
+
+        if (model.availableAnimations.Count == 0)
+        {
+            throw new Exception("AnimatedModel requires at least one animation");
+        }
+
+        model.animationPlayer.CurrentAnimation = model.availableAnimations[0];  
+
+        if (model.playOnMatch)
+        {
+            model.animationPlayer.Play();
+        }
+
+    }
+    protected override void OnUnmatch(ComponentType componentType, Entity entity)
+    {
+        GodotBridge.Instance.DestroyModel(entity);
+    }
+    protected override void OnDelete(Entity entity)
+    {
+        GodotBridge.Instance.DestroyModel(entity);
+    }
+
+    public static bool Play(Entity entity, StringName animationName = default)
+    {
+
+        if (entity.HasComponent<AnimatedModel>())
+        {
+            ref AnimatedModel model = ref entity.GetComponent<AnimatedModel>();
+            if (animationName == default)
+            {
+                model.animationPlayer.Play();
+            }
+            else
+            {
+                if (model.availableAnimations.Contains(animationName))
+                {
+                    model.animationPlayer.Play(animationName);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static bool Play(Entity entity, int animationIndex = 0)
+    {
+        if (animationIndex < 0) return false;
+
+        if (entity.HasComponent<AnimatedModel>())
+        {
+            ref AnimatedModel model = ref entity.GetComponent<AnimatedModel>();
+
+            if (model.availableAnimations.Count > animationIndex)
+            {
+                model.animationPlayer.Play(model.availableAnimations[animationIndex]);
+                return true;
+            }
+            return false;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }

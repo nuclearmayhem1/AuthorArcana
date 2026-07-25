@@ -57,4 +57,14 @@ public partial class GodotBridge : Node
         return true;
     }
 
+    public Node3D GetOrCreateModel(Entity entity, AnimatedModelAsset asset)
+    {
+        if (entityModels.ContainsKey(entity)) return entityModels[entity];
+
+        Node3D newModel = asset.GetModel().Instantiate<Node3D>();
+        entityNodes[entity].AddChild(newModel);
+        entityModels[entity] = newModel;
+        GD.Print($"Instatiated model: {entity}");
+        return newModel;
+    }
 }

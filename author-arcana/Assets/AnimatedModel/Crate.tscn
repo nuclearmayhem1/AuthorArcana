@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c8l08vt3pdl4h"]
+
+[ext_resource type="PackedScene" uid="uid://dwtdk8bha4cwd" path="res://Assets/Model/Crate.tscn" id="1_jr5o7"]
+
+[sub_resource type="Animation" id="Animation_vieqm"]
+resource_name = "Animation1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -7.7483263)]
+}
+
+[sub_resource type="Animation" id="Animation_ldd6w"]
+resource_name = "Animation2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -7.7483263), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ug3u6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qbopv"]
+_data = {
+&"Animation1": SubResource("Animation_vieqm"),
+&"Animation2": SubResource("Animation_ldd6w"),
+&"RESET": SubResource("Animation_ug3u6")
+}
+
+[node name="Crate2" unique_id=647655289 instance=ExtResource("1_jr5o7")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=235240946]
+libraries/ = SubResource("AnimationLibrary_qbopv")
