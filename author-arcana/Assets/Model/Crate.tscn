@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dwtdk8bha4cwd"]
+
+[ext_resource type="PackedScene" uid="uid://druhv7myyvcii" path="res://Assets/ModelAssets/Wooden Crate/Crate.blend" id="1_8cfd1"]
+
+[node name="Crate2" unique_id=647655289 instance=ExtResource("1_8cfd1")]

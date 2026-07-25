@@ -1,0 +1,5 @@
+global using AUTHORARCANA;
+global using AUTHORARCANA.ECS;
+global using AUTHORARCANA.DEFINITIONS;
+global using AUTHORARCANA.BRIDGE;
+global using AUTHORARCANA.CONTENT;

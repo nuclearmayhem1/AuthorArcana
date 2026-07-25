@@ -4,3 +4,8 @@
 
 [node name="EcsTest" type="Node" unique_id=1219117700]
 script = ExtResource("1_sj0jx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=717701078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.176392)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=180566035]
